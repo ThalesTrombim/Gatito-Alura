@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Text, SafeAreaView, StatusBar, FlatList } from 'react-native';
+import { SafeAreaView, StatusBar, FlatList } from 'react-native';
 import { Item } from '../Item';
 
 const services = [
@@ -20,7 +20,7 @@ const services = [
         id: 3,
         name: 'Vacina Antirrábica',
         price: 99.9,
-        description: 'Uma dose da vacina V4, seu gato precisa uma por ano.'
+        description: 'Uma dose da vacina antirrábica, seu gato precisa de uma por ano.'
     }
 ]
 
@@ -28,9 +28,6 @@ function Services(){
     return (
         <SafeAreaView>
             <StatusBar />
-            <Text>
-                Serviços
-            </Text>
             <FlatList 
                 data={ services }
                 renderItem={({ item }) => <Item {...item} />}
