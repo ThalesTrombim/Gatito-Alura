@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { cores } from '../../styles';
+import { cores } from '../../../styles';
 
 export default StyleSheet.create({
   informacao: {

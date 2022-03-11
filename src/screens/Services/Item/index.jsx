@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { MyButton } from '../../components/Button';
-import { CampoInteiro } from '../../components/CampoInteiro';
+import { MyButton } from '../../../components/Button';
+import { CampoInteiro } from '../../../components/CampoInteiro';
 import style from './style';
 
 function Item({ name, price, description }){
@@ -54,7 +54,7 @@ function Item({ name, price, description }){
                             </Text>
                         </View>
                     </View>
-                    <MyButton val='Adicionar' action={() => {}}/>
+                    <MyButton val='Adicionar ao carrinho' action={() => {}}/>
                 </View>
             }
             <View style={style.divisor} />
