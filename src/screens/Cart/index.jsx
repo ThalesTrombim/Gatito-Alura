@@ -2,7 +2,6 @@ import React from 'react';
 
 import { FlatList } from 'react-native';
 import { Item } from './Item';
-import { ScreenDefault } from '../../components/ScreenDefault';
 import { StatusCart } from '../../components/StatusCart';
 
 const services = [
@@ -33,14 +32,14 @@ function Cart(){
     const total = services.reduce((soma, { price, quant }) => soma + (price * quant), 0)
 
     return (
-        <ScreenDefault>
+        <>
             <StatusCart total={total}/>
             <FlatList 
                 data={ services }
                 renderItem={({ item }) => <Item {...item} />}
                 keyExtractor={({ id }) => String(id)}
             />
-        </ScreenDefault>
+        </>
     )
 }
 

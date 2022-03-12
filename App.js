@@ -1,11 +1,15 @@
 import React from 'react';
-import { Services } from './src/screens/Services';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
-import { Cart } from './src/screens/Cart';
+
+import { ScreenDefault } from './src/components/ScreenDefault';
+import { Routes } from './src/Routes';
+
 
 export default function App() {
   return (
-    <Cart />
+    <ScreenDefault>
+      <Routes />
+    </ScreenDefault>
   );
 }

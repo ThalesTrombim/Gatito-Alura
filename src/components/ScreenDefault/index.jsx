@@ -1,18 +1,23 @@
-import react from 'react';
+import React from 'react';
 
 import { SafeAreaView, StatusBar, KeyboardAvoidingView, Platform } from 'react-native';
-import style from '../../styles';
+import style, { cores } from '../../styles';
+import styles from './styles';
 
 function ScreenDefault({ children }) {
     return (
-        <SafeAreaView style={style.preencher}>
-            <StatusBar />
-            <KeyboardAvoidingView 
-                behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
-            >
-                { children }
-            </KeyboardAvoidingView>
-        </SafeAreaView>
+        <>
+            <SafeAreaView style={styles.ajustScreen}>
+                <StatusBar backgroundColor={cores.roxo}/>
+                <KeyboardAvoidingView 
+                    behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+                    style={style.preencher}
+                >
+                    { children }
+                </KeyboardAvoidingView>
+            </SafeAreaView>
+            <SafeAreaView style={styles.ajustScreenBottom} />
+        </>
     )
 }
 
